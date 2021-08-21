@@ -5,7 +5,9 @@
     padding: 50px 50px;
   }
 
-  
+  .nav-link {
+    margin:10px;
+  }
   /*.customlink {
     white-space: nowrap;
     display: flex;

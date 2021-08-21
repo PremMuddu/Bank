@@ -60,7 +60,10 @@ function Balance() {
       <h2>Balance</h2>
       {message}
       <br/>
-      <button type='submit' className='btn btn-secondary'><a href='/#/login'>login</a></button>
+      <button type='submit' className='btn btn-secondary'><a href='/#/deposit'>deposit</a></button>
+      <button type='submit' className='btn btn-secondary'><a href='/#/withdraw'>withdraw</a></button>
+      <button type='submit' className='btn btn-secondary'><a href='/#/login'>login</a></button>  
+
           <br/>
           
         </div>

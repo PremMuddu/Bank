@@ -15,7 +15,7 @@ function checkLogin(name, password, users) {
   return false;
 }
 
-function Login() {
+function Login(props) {
 console.log("Login")
   const [context, setContext, render, setRender] = useContext(UserContext);
 
@@ -38,6 +38,7 @@ console.log("Login")
         context.users
       );
       if (!isLoginValid) {
+        
         errors.login = 'Invalid login';
       }
       return errors;
@@ -51,6 +52,7 @@ console.log("Login")
       console.log(newState,context);
       resetForm();
       alert(`Welcome back, ${values.name}!`);
+      props.history.push('/balance')
     }
   };
   

@@ -17,8 +17,7 @@ function App() {
   const [state, setState] = useState({
     loggedInUser: null,
     users: [
-      { name: 'john doe', email:'johndoe@gmail.com', password: 'secretly', password2: 'secretly', balance: 0 },
-                                                     
+      {name: 'a', email:'a@gmail.com', password: 'a', password2: 'a', balance: 0 },                                            
     ]
   })
   console.log(state);
@@ -26,7 +25,8 @@ function App() {
     <HashRouter>
       
       <UserContext.Provider value={[state,setState,render,setRender]}>
-      <NavBar />
+    
+        <Route path='/*' exact component={NavBar} />
         <Route path='/' exact component={Home} />
         <Route path='/create-account' component={CreateAccount} />
         <Route path='/login' component={Login} />
@@ -40,20 +40,5 @@ function App() {
   );
   
 }
-/*function CreateAccount(){
-  const ctx = React.useContext(UserContext);
 
-  function handle(data) {
-    ctx.users.push({name:data.name,email:data.email, password:data.password,balance:100});
-    return true;
-  }
- return (
-  <BankForm
-  bgcolor="primary"
-  label="Create Account"
-  handle={handle}
-  hideAmount={true}
-  successButton='Add another account'
-  />
-}*/
 export default App;

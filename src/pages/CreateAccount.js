@@ -8,7 +8,7 @@ function CreateAccount() {
 console.log('CreateAccount')
   const [context, setContext] = useContext(UserContext);
   const user=context.loggedInUser;
-  const buttonText = context.users.length > 1 ? 'Create another account': 'Create Account'
+  const buttonText = context.users.length > 1 ? 'Add another account': 'Create Account'
   const formikProps = {
     initialValues: {
       name: '',
@@ -63,7 +63,7 @@ console.log('CreateAccount')
   return (
     <div className='content'>
     <Card
-    header="Create an Account"
+    header="Create Account"
     body={(<Formik {...formikProps}>
         <Form>
           <div className='form-group'>

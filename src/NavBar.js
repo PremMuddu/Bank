@@ -3,21 +3,31 @@ import "./Navbar.css";
 import { useContext, useState } from 'react';
 import UserContext from './UserContext.js';
 
-function NavBar() {
+function NavBar(props) {
   const [context, setContext] = useContext(UserContext) || []
   const user= context?.loggedInUser 
   console.log(context);
+
+  const logOut = () =>{
+    const newState = {...context};
+    newState.loggedInUser = null;
+    props.history.push('/#')
+    setContext(newState);
+
+  }
  const loggedInLinks = [
  <Bootstrap.Nav.Link href='/#/balance'>Balance</Bootstrap.Nav.Link>,
  <Bootstrap.Nav.Link href='/#/deposit'>Deposit</Bootstrap.Nav.Link>,
  <Bootstrap.Nav.Link href='/#/withdraw'>Withdraw</Bootstrap.Nav.Link>,
+ <Bootstrap.Nav.Link href='/#/all-data'>All Data</Bootstrap.Nav.Link>,
+ <Bootstrap.Nav.Link onClick={logOut}>Logout</Bootstrap.Nav.Link>,
 ]
 
  const loggedOutLinks =[
   <Bootstrap.Nav.Link href='/#'>Home</Bootstrap.Nav.Link>,
   <Bootstrap.Nav.Link href='/#/create-account'>Create Account</Bootstrap.Nav.Link>,
  <Bootstrap.Nav.Link href='/#/login'>Login</Bootstrap.Nav.Link>,
-
+<Bootstrap.Nav.Link href='/#/all-data'>All Data</Bootstrap.Nav.Link>,
  ]
 
  
@@ -27,6 +37,7 @@ function NavBar() {
     
       <Bootstrap.Container>
        <Bootstrap.Nav className="me-auto">
+       <p>logo</p> 
        <h3 classname="title">
           Universal banking
         </h3>
@@ -48,7 +59,7 @@ function NavBar() {
          <Bootstrap.Nav.Link href='/#/deposit'>Deposit</Bootstrap.Nav.Link>
           <Bootstrap.Nav.Link href='/#/withdraw'>Withdraw</Bootstrap.Nav.Link> */}
           
-          <Bootstrap.Nav.Link href='/#/all-data'>All Data</Bootstrap.Nav.Link>
+          
         </Bootstrap.Nav>
       </Bootstrap.Container>
     </Bootstrap.Navbar>
