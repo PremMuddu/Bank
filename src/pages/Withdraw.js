@@ -15,7 +15,7 @@ function Withdraw() {
       <div className='content'>
         <h2>Withdraw</h2>
         <div>
-          <h3>Please login to withdraw...</h3>
+          <h4>Please login...</h4>
         </div>
       </div>
     );
@@ -37,8 +37,8 @@ function Withdraw() {
     validate: values => {
       const errors = {};
      
-      if (!values.amount) {
-        errors.amount = 'Not a number';
+      if (!values.amount ) {
+        errors.amount = 'Invalid values';
      }
     
     
@@ -49,12 +49,12 @@ function Withdraw() {
   onSubmit: (values, { resetForm } ) => {
     
     let flag = false;
-      // Update our user's balance
+    
       for (let i = 0; i < context.users.length; i++) {
         const eachUser = context.users[i];
         if (eachUser.name === context.loggedInUser) {
-          if(values.amount > 0 && values.amount <= context.users[i].balance){
-          context.users[i].balance -= Number(values.amount);
+          if(values.amount > 0 && values.amount <= context.users[i].myaccount){
+          context.users[i].myaccount -= Number(values.amount);
           flag = true;
           }
           if(flag) {
@@ -65,34 +65,37 @@ function Withdraw() {
             else {
               setRender(!render);
               resetForm();
-               alert('Invalid withdraw: Must be a positive number below account balance!');
+               alert('Invalid withdraw: Below account balance!');
             }
         }
       }
+     
     }
   };
 
-  // Render the content
+ 
+
+
+
   return (
     <div className='content'>
-      <h2>Withdraw</h2>
-      
-      <Card
+   <Card
+   header="Withdraw fresh breathe of air!"
       body={(
       <Formik {...formikProps}>
         <Form>
         <div>
-        Your balance is: ${user.balance}.
+        Your balance is: ${user.myaccount}.
       </div>
           <div className='form-group'>
          
             <label htmlFor='amount'>Amount</label>
-            <Field type='number' className='form-control' id='amount' name='amount' placeholder='*****' />
+            <Field type='number' className='form-control' id='amount' name='amount' placeholder='abcd' />
             <ErrorMessage className='error' name='amount' component='div' />
           </div>
 
           <br/>
-          <button type='submit' className='btn btn-primary'>Withdraw</button>
+          <button type='submit' className='btn btn-primary'>Submit</button>
         </Form>
 
       </Formik>

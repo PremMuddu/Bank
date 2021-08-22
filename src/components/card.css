@@ -15,22 +15,21 @@
   
  .card-header {
   box-sizing:border-box;
-  padding: .5rem 1rem;
-  background-color:#a0e5c3 ;
-
+  padding: .4rem 2rem;
+  background-color:#a0e5c3;
   border: 5px solid;
   font-weight:bold;
-  font-size: x-large ;
-  font-style:italic;
-   border-radius: 1px;
+  font-size: xx-large ;
+  font-style:times;
+  border-radius: 1px;
+  
+}
 
-  }
+  
 
  
  
-  .card-title {
 
-  }
   .card-text{
       font-size: large;
   }

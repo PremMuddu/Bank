@@ -7,9 +7,8 @@ import Login from './pages/Login.js';
 import CreateAccount from './pages/CreateAccount.js';
 import Deposit from './pages/Deposit.js';
 import AllData from './pages/AllData.js';
-import Balance from './pages/Balance.js';
+import MyAccount from './pages/MyAccount.js';
 import Withdraw from './pages/Withdraw.js';
-import Welcome from './pages/Welcome.js';
 import "./App.css";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
   const [state, setState] = useState({
     loggedInUser: null,
     users: [
-      {name: 'a', email:'a@gmail.com', password: 'a', password2: 'a', balance: 0 },                                            
+      {name: 'a', email:'a@gmail.com', password: 'a', password2: 'a', myaccount: 0 },                                            
     ]
   })
   console.log(state);
@@ -33,8 +32,7 @@ function App() {
         <Route path='/deposit' component={Deposit} />
         <Route path='/all-data' component={AllData} />
         <Route path='/withdraw' component={Withdraw} />
-        <Route path='/welcome' component={Welcome} />
-        <Route path='/balance' component={Balance} />
+        <Route path='/my-account' component={MyAccount} />
       </UserContext.Provider>
     </HashRouter>
   );

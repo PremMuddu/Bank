@@ -7,32 +7,33 @@ import Card from '../components/Card.js';
 function Deposit() {
 
   const [context, setContext] = useContext(UserContext);
-  //const [user,setUser] =useState({})
+
   const [render,setRender] =useState(false)
 
-  // Display special HTML if they are not logged in
+
   if (context.loggedInUser === null) {
+    
     return (
       <div className='content'>
         <h2>Deposit</h2>
         <div>
-          <h3>Please login to deposit....</h3>
+          <h4>Please login...</h4>
         </div>
       </div>
     );
   }
 
-  // Get the logged in user
+
   let user;
 
   for (const eachUser of context.users) {
     if (eachUser.name === context.loggedInUser) {
       user = eachUser;
-      //setUser(eachUser)
+  
     }
   }
 
-  // Set up formik
+
   const formikProps = {
     initialValues: {
       amount: 0
@@ -42,7 +43,7 @@ function Deposit() {
       const errors = {};
      
       if (!values.amount) {
-        errors.amount = 'Not a number';
+        errors.amount = 'Invalid values';
      }
     
     
@@ -53,12 +54,12 @@ function Deposit() {
    onSubmit: (values, { resetForm } ) => {
     
     let flag = false;
-      // Update our user's balance
+    
       for (let i = 0; i < context.users.length; i++) {
         const eachUser = context.users[i];
         if (eachUser.name === context.loggedInUser) {
           if(values.amount > 0){
-          context.users[i].balance += Number(values.amount);
+          context.users[i].myaccount += Number(values.amount);
           flag = true;
           }
           if(flag) {
@@ -76,15 +77,16 @@ function Deposit() {
   }
 };
 
-  // Render the content
+
   return (
     <div className='content'>
-      <h2>Deposit</h2>
+    
      <Card
+     header="Deposit to grow a plant!"
       body={(<Formik {...formikProps}>
         <Form>
         <div>
-        Your balance is: ${user.balance}.
+        Your balance is: ${user.myaccount}.
         </div>
           <div className='form-group'>
             <label htmlFor='amount'>Amount</label>
@@ -93,7 +95,7 @@ function Deposit() {
           </div>
 
           <br/>
-          <button type='submit' className='btn btn-primary'>Deposit</button>
+          <button type='submit' className='btn btn-primary'>Submit</button>
         </Form>
 
       </Formik>

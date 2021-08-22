@@ -51,7 +51,7 @@ console.log('CreateAccount')
         email: values.email,
         password: values.password,
         password2:values.password2,
-        balance: 0
+        myaccount: 0
       });
       setContext (newContext)
       resetForm();
@@ -90,9 +90,9 @@ console.log('CreateAccount')
           </div>
           <br/>
           
-          <button type='submit' className='btn btn-primary'>{buttonText}</button>
+          <button type='submit' className='btn btn-primary'>{buttonText}</button>&nbsp;&nbsp;
          <span className='form-group-login'>
-            Already have an account? Signin<a href='/#/login'>here</a>
+            Already have an account? Sign in&nbsp; <button type='submit' className='btn-btn-secondary'><a href='/#/login'>here</a></button>
           </span>
         
         </Form>

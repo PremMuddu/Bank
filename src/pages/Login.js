@@ -51,8 +51,8 @@ console.log("Login")
      
       console.log(newState,context);
       resetForm();
-      alert(`Welcome back, ${values.name}!`);
-      props.history.push('/balance')
+      alert(`Welcome ${values.name}!`);
+      props.history.push('/my-account')
     }
   };
   
@@ -79,11 +79,9 @@ console.log("Login")
           </div>
           
           <br/>
-          <button type='submit' className='btn btn-primary'>Login</button>
-          
-          <br/>
+          <button type='submit' className='btn btn-primary'>Login</button>&nbsp;&nbsp;
           <span className='form-group-login'>
-            Check balance <a href='/#/balance'>here</a>
+            Check your Account <button type='submit' className='btn-btn-secondary'><a href='/#/my-account'>here</a></button>
           </span>
         </Form>
       </Formik>

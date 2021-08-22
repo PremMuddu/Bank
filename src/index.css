@@ -12,43 +12,119 @@
 }
 .error {
   color: rgb(255, 0, 0);
-  opacity: 0.8;
+  opacity: 0.7;
   margin-bottom: 4px;
+
+}
+a {
+  color:#1e531c; 
+  text-decoration: none;
+  text-decoration: none;
+  font-size: x-large;
+  font:black;
 }
 
+a:hover{
+  text-decoration: none;
+} 
 h2 {
   color: white;
-  font-size: 6vw;
+  font-size: 2.5vw;
   text-shadow: 0.5vw 0 #011b1b;
 }
  h3 {
    color:aqua;
+   font-size: 2.5vw;
+    text-shadow: 0.1vw 0 rgb(18, 61, 61); 
  }
+ h4 {
+  color:aqua;
+  font-size: 1.5vw;
+   text-shadow: 0.1vw 0 aqua; 
+}
+
 .btn-container {
  border: 3px;
 background-color:black;
 text-decoration: none;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: red;
-  border-color: #0d6efd;
+.btn.btn-primary {
+  color:black;
+  background-color: #1b6e18;
+  border-color: #5c7969;
+  border:2px solid black;
+  outline:auto;
 }
+.btn.btn-primary:hover {
+  color:black;
+  background-color: #52cf4d !important; 
+  border:2px solid black; 
+  outline-offset: 0ch;
+  outline:auto;
+}
+ .btn.btn-primary:focus {
+outline:auto;
+} 
+
 .btn-btn-secondary {
-  background-color:#5c7969;
+  background-color:#367035;
+  border: 2px solid;
+  border-radius: 5px;
+  outline-offset: 0ch;
+  outline:auto;
 }
+.btn-btn-secondary:focus {
+  outline: auto;
+
+} 
+.btn-btn-secondary:hover{
+  color:black;
+  background-color: #52cf4d !important; 
+  border:2px solid black; 
+  outline-offset: 0ch;
+  outline: auto;
+}
+
 .btn-btn-secondary a {
   color:black;
-  font-family: cursive;
+  font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
   text-decoration-line: none;
   text-decoration-style: none;
-  
+  font-size: larger;
 
 }
+
 
 .json {
   white-space: break-spaces;
   font-family: monospace;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid #ced4da;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: .30rem;
+  border-color: #011b1b;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  outline:none;
+  box-shadow: none !important;
+}
+
+
+.form-control:hover {
+  background-color: #bbdace;
+}
+.form-control:focus {
+  outline:auto;
 }

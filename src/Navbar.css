@@ -1,35 +1,35 @@
 .nav-bar {
-    background: #000;
+    background:black;
     display: flex;
-    justify-content: space-around ;
-    padding: 50px 50px;
+    padding: 35px 35px;
   }
 
   .nav-link {
-    margin:10px;
+    margin: 10px;
+
   }
-  /*.customlink {
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 4.4vw;
-    margin-left: 5px;
-    text-shadow: 0.5vw 0 #1a5150;
-  }*/
-.me-auto :hover,
+ 
+ .earth-logo {
+   height: 80px;
+  padding: right 4px;
+ }
+
+
+.me-auto a:hover{
+  color: rgb(61, 157, 139);
+  transform: scale(1.2);
+} 
 .me-auto a:focus {
   transform: scale(1.2);
-   color: #fff;
+   color:rgb(61, 157, 139);
     font-size: 1.5vw;
     text-decoration: none;
     text-decoration-line: none;
     text-decoration-thickness: initial;
     text-decoration-style: initial;
     text-decoration-color: initial;
-    padding: 0 20px;
-    padding-right: 5px;
+    padding: 0 0px;
+    padding-right: 0px;
     padding-bottom: 0px;
     padding-left: 20px;
     transition: all .2s ease-in-out;
