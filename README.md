@@ -19,9 +19,9 @@ Enter "npm start" to start the project. This application will open on a web brow
 2. Login Page:  Allows users to signin with username and password to access Myaccount, deposit or withdraw page.
 3. Myaccount Page:  Shows the current balance of the user and allows to access deposit or withdraw page.
 4. Deposit Page:  Allows user to make a deposit to the account.
-5. Withdrawal Page:  Allows user to withdraw from the account.
+5. Withdraw Page:  Allows user to withdraw from the account.
 6. All Data Page:  Shows all user data.
-7. logout Page:  Allows users to logout and start form the home page.
+7. Logout Page:  Allows users to logout and begin from the landing page.
 
 # Technology
 
