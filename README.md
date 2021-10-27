@@ -9,11 +9,11 @@ Description: This is a single page atm banking project that allows the users to 
 2. Clone the repo into your project directory by entering the gitclone[link].
 3. Enter "npm install" to install the packages.
 
-##How to run:
+# How to run:
 
 Enter "npm start" to start the project. This application will open on a web browser.
 
-##Features:
+# Features:
 
 Create Account Page: Allows new account to be created. Input fields must match the required validation to be successfully. Pushes information for storage on Alldata page.
 Login Page: Allows users to signin with username and password to access Myaccount, deposit or withdraw page.
@@ -23,7 +23,7 @@ Withdrawal Page: Allows user to withdraw from the account.
 All Data Page: Shows all user data.
 logout Page: Allows users to logout and start form the home page.
 
-##Technology:
+# Technology:
 
 HTML
 CSS
@@ -33,7 +33,7 @@ React Bootstrap
 React Router
 Formik
 
-##Road Map:
+# Road Map:
 
 1. Add backend for data storage.
 2. Add Authentication for login.
@@ -41,7 +41,7 @@ Formik
 4. Responsive design for user interface.
 
 
-##License:
+# License:
 
 Copyright 2021 Premila Mudduswamy
 
