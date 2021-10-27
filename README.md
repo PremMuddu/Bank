@@ -3,7 +3,7 @@
 
 Description: This is a single page atm banking project that allows the users to create an account, add another account, deposit and withdraw money. Users can interact with the static website to experience the application work close to a real atm machine. This is frontend application only which is in the development process into a Full stack MERN application.
 
-##Installation: 
+# Installation: 
 
 1. Click on the fork button and copy the code.
 2. Clone the repo into your project directory by entering the gitclone[link].
