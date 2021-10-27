@@ -25,13 +25,13 @@ Enter "npm start" to start the project. This application will open on a web brow
 
 # Technology:
 
-HTML
-CSS
-JavaScript
-React
-React Bootstrap
-React Router
-Formik
+.HTML
+.CSS
+.JavaScript
+.React
+.React Bootstrap
+.React Router
+.Formik
 
 # Road Map:
 
