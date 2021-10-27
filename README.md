@@ -1,4 +1,5 @@
 #  Banking Application build on React App. 
+![Banking](https://user-images.githubusercontent.com/80130935/139123421-f0a000cc-b655-4356-9b62-0696caea0b91.gif)
 
 Overview: This is a single page atm banking project that allows the users to create an account, add another account if needed, deposit and withdraw money. Users can interact with the static website to see the application work close to a real atm machine.
 
